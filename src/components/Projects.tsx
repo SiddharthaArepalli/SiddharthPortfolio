@@ -17,10 +17,10 @@ const Projects = () => {
           end: "bottom center",
           toggleActions: "play none none reverse"
         },
-        y: 100,
+        y: 50,
         opacity: 0,
-        duration: 1,
-        stagger: 0.2,
+        duration: 0.5,
+        stagger: 0.1,
         ease: "power4.out"
       });
     }, projectsRef);
@@ -42,7 +42,7 @@ const Projects = () => {
       tech: ["Node.js", "Express.js", "Nodemon(NPM) ", "File System"]
     },
     {
-      title: "Social Media App",
+      title: "Crypto Baz",
       description: "Feature-rich social platform with real-time messaging",
       image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
       tech: ["Next.js", "Socket.io", "PostgreSQL"]
@@ -50,7 +50,7 @@ const Projects = () => {
   ];
 
   return (
-    <div ref={projectsRef} className="bg-black text-white py-20 px-4">
+    <div ref={projectsRef} className="bg-gray-900 text-gray-100 py-20 px-4">
       <div className="max-w-6xl mx-auto">
       <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
         Featured Projects
@@ -64,7 +64,7 @@ const Projects = () => {
           alt={project.title}
           className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent p-8 flex flex-col justify-end transform transition-transform duration-300">
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent p-8 flex flex-col justify-end transform transition-transform duration-300">
           <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
           <p className="text-gray-300 mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
@@ -75,10 +75,10 @@ const Projects = () => {
             ))}
           </div>
           <div className="flex gap-4">
-            <a href="https://github.com/SiddharthaArepalli/ArthGyan" className="text-white hover:text-purple-400 transition-colors">
+            <a href="https://github.com/SiddharthaArepalli/ArthGyan" className="text-gray-100 hover:text-purple-400 transition-colors">
             <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-white hover:text-purple-400 transition-colors">
+            <a href="#" className="text-gray-100 hover:text-purple-400 transition-colors">
             <ExternalLink className="w-6 h-6" />
             </a>
           </div>

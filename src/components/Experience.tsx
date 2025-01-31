@@ -35,10 +35,10 @@ const Experience = () => {
           end: "bottom center",
           toggleActions: "play none none reverse"
         },
-        y: 100,
+        y: 50,
         opacity: 0,
-        duration: 0.8,
-        stagger: 0.2
+        duration: 0.5,
+        stagger: 0.1
       });
     }, sectionRef);
 
@@ -48,21 +48,21 @@ const Experience = () => {
   return (
     <section ref={sectionRef} className="min-h-screen flex items-center py-20 px-4">
       <div className="container mx-auto">
-        <div className="max-w-4xl mx-auto backdrop-blur-md bg-white/10 p-8 rounded-2xl border border-white/20">
-          <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+        <div className="max-w-4xl mx-auto backdrop-blur-md bg-black/10 p-8 rounded-2xl border border-white/20">
+          <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
             Work Experience
           </h2>
           <div className="space-y-8">
             {experiences.map((exp, index) => (
               <div key={index} className="experience-card flex gap-6 p-6 rounded-xl bg-white/5 border border-white/10">
                 <div className="hidden md:flex items-start">
-                  <div className="p-3 rounded-full bg-purple-500/20">
-                    <Briefcase className="w-6 h-6 text-purple-400" />
+                  <div className="p-3 rounded-full bg-blue-500/20">
+                    <Briefcase className="w-6 h-6 text-blue-400" />
                   </div>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white">{exp.role}</h3>
-                  <p className="text-purple-400 mb-2">{exp.company}</p>
+                  <p className="text-blue-400 mb-2">{exp.company}</p>
                   <p className="text-gray-400 text-sm mb-3">{exp.period}</p>
                   <p className="text-gray-300">{exp.description}</p>
                 </div>

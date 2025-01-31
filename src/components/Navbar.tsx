@@ -19,18 +19,18 @@ const Navbar = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.from(navRef.current, {
-        y: -100,
+        y: -50,
         opacity: 0,
-        duration: 1,
+        duration: 0.5,
         ease: 'power4.out',
       });
 
       gsap.from('.nav-item', {
         opacity: 0,
-        y: -20,
-        duration: 0.5,
-        stagger: 0.1,
-        delay: 0.5,
+        y: -10,
+        duration: 0.3,
+        stagger: 0.05,
+        delay: 0.3,
       });
     }, navRef);
 
@@ -43,14 +43,14 @@ const Navbar = () => {
         gsap.to(menuRef.current, {
           x: 0,
           opacity: 1,
-          duration: 0.3,
+          duration: 0.2,
           ease: 'power2.out',
         });
       } else {
         gsap.to(menuRef.current, {
           x: '100%',
           opacity: 0,
-          duration: 0.3,
+          duration: 0.2,
           ease: 'power2.in',
         });
       }
@@ -59,16 +59,16 @@ const Navbar = () => {
 
   return (
     <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto flex justify-center">
         <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a
+            {/* <a
               href="#"
-              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent"
+              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
             >
               ASG
-            </a>
+            </a> */}
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -79,7 +79,7 @@ const Navbar = () => {
                   className="nav-item text-gray-300 hover:text-white transition-colors relative group"
                 >
                   {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-600 transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-300 group-hover:w-full" />
                 </a>
               ))}
             </div>

@@ -14,10 +14,10 @@ const About = () => {
           end: "bottom center",
           toggleActions: "play none none reverse"
         },
-        y: 100,
+        y: 50,
         opacity: 0,
-        duration: 1,
-        stagger: 0.2
+        duration: 0.5,
+        stagger: 0.1
       });
     }, sectionRef);
 
@@ -27,8 +27,8 @@ const About = () => {
   return (
     <section ref={sectionRef} className="min-h-screen flex items-center py-20 px-4">
       <div className="container mx-auto">
-        <div className="about-content max-w-4xl mx-auto backdrop-blur-md bg-white/10 p-8 rounded-2xl border border-white/20">
-          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">About Me</h2>
+        <div className="about-content max-w-4xl mx-auto backdrop-blur-md bg-black/10 p-8 rounded-2xl border border-white/20">
+          <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">About Me</h2>
           <p className="text-xl text-gray-300 mb-8">
             Hello! 👋 I’m Siddhartha, a dedicated MERN Stack developer, open-source contributor, and tech enthusiast passionate about solving problems and building innovative solutions.
           </p>
@@ -43,17 +43,17 @@ const About = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="about-content flex flex-col items-center text-center p-6 rounded-xl bg-white/5">
-              <Globe className="w-12 h-12 text-blue-400 mb-4" />
+              <Globe className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Tech Enthusiast</h3>
               <p className="text-gray-400">Passionate about exploring and embracing new technologies</p>
             </div>
             <div className="about-content flex flex-col items-center text-center p-6 rounded-xl bg-white/5">
-              <Code className="w-12 h-12 text-pink-400 mb-4" />
+              <Code className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Open Source Contribution</h3>
               <p className="text-gray-400">Actively contributing to open-source projects and communities</p>
             </div>
             <div className="about-content flex flex-col items-center text-center p-6 rounded-xl bg-white/5">
-              <Coffee className="w-12 h-12 text-purple-400 mb-4" />
+              <Coffee className="w-12 h-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-2">Always Learning</h3>
               <p className="text-gray-400">Constantly expanding my knowledge and skills</p>
             </div>

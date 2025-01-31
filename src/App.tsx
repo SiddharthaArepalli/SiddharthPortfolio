@@ -21,9 +21,9 @@ function App() {
   }, []);
 
   return (
-    <div className="relative bg-black">
+    <div className="relative bg-gradient-to-r from-black to-blue-900">
       <Cursor />
-      <div className="fixed bg-red-600 first-line:bg-cover bg-center bg-no-repeat" />
+      <div className="fixed bg-cover bg-center bg-no-repeat" />
       <div className="fixed inset-0 bg-black/40 backdrop-blur-sm" />
       <div className="relative z-10">
         <Navbar />
