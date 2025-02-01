@@ -5,7 +5,7 @@
 @layer base {
   body {
     visibility: hidden;
-    @apply bg-black text-white cursor-none;
+    @apply bg-gradient-to-r from-black to-blue-900 cursor-none text-white;
   }
 }
 
@@ -41,5 +41,12 @@ a, button, input, textarea {
 @media (max-width: 768px) {
   .cursor, .cursor-follower {
     display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .herosection {
+    margin-top: 80px;
   }
 }

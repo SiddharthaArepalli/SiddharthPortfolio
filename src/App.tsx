@@ -7,7 +7,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
-import Contact from './components/Contact';
+import Newsletter from './components/Newsletter';
 import Cursor from './components/Cursor';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -42,8 +42,8 @@ function App() {
         <section id="experience">
           <Experience />
         </section>
-        <section id="contact">
-          <Contact />
+        <section id="newsletter">
+          <Newsletter />
         </section>
       </div>
     </div>

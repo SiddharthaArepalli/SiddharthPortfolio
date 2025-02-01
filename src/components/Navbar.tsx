@@ -62,13 +62,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex justify-center">
         <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            {/* <a
-              href="#"
-              className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent"
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden text-white"
+              onClick={() => setIsOpen(!isOpen)}
             >
-              ASG
-            </a> */}
+              <Menu />
+            </button>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
@@ -83,14 +83,6 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-white"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <Menu />
-            </button>
           </div>
         </div>
       </div>
@@ -98,7 +90,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 h-full w-3/4 max-w-sm mt-30 z-50 shadow-lg transform translate-x-full opacity-0 flex flex-col p-6"
+        className="fixed top-0 right-0 h-full w-3/4 max-w-sm mt-30 z-50 shadow-lg transform translate-x-full opacity-0 flex flex-col p-6 bg-black/80 backdrop-blur-md"
       >
         <div className="flex justify-between items-center mb-6">
           <button

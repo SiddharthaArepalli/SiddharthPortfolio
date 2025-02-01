@@ -50,13 +50,13 @@ const Projects = () => {
   ];
 
   return (
-    <div ref={projectsRef} className="bg-gray-900 text-gray-100 py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <div ref={projectsRef} className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent text-gray-100 py-20 px-4">
+      <div className="max-w-6xl mx-auto bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
       <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
         Featured Projects
       </h2>
       
-      <div className="projects-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="projects-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {projects.map((project, index) => (
         <div key={index} className="project-card group relative overflow-hidden rounded-xl">
           <img 
@@ -66,7 +66,7 @@ const Projects = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent p-8 flex flex-col justify-end transform transition-transform duration-300">
           <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-          <p className="text-gray-300 mb-4">{project.description}</p>
+          <p className="text-gray-200 mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {project.tech.map((tech, i) => (
             <span key={i} className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">

@@ -38,13 +38,27 @@ const Hero = () => {
         ease: "back.out(1.7)",
         delay: 0.3
       });
+
+      // Zero-gravity bouncy words animation for the name
+      const letters = headingRef.current.textContent.split("");
+      headingRef.current.innerHTML = letters.map(letter => `<span class="letter">${letter}</span>`).join("");
+      gsap.fromTo(".letter", {
+        y: -20,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "bounce.out",
+        stagger: 0.05
+      });
     }, heroRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <div ref={heroRef} className="min-h-screen flex flex-col lg:flex-row items-center relative overflow-hidden px-4 lg:px-8">
+    <div ref={heroRef} className="min-h-[70vh] flex flex-col lg:flex-row items-center relative overflow-hidden px-4 lg:px-8 mt-20 lg:mt-20">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
@@ -52,7 +66,7 @@ const Hero = () => {
             <div className="overflow-hidden">
               <h1 
                 ref={headingRef}
-                className="text-4xl sm:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-white-900 leading-tight"
+                className="text-4xl sm:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-white leading-tight"
               >
                 Siddhartha Arepalli
               </h1>
