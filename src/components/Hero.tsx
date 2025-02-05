@@ -77,7 +77,7 @@ const Hero = () => {
                 ref={textRef}
                 className="text-lg sm:text-xl lg:text-2xl text-gray-300"
               >
-                Crafting digital experiences with code and creativity
+                Mern Stack Developer | Open Source Contributor | Tech Enthusiast
               </p>
             </div>
             
@@ -86,7 +86,7 @@ const Hero = () => {
                 <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
                   <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
                 </div>
-                <span className="mt-2 text-xs sm:text-sm">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/siddharthaarepalli/"><span className="mt-2 text-xs sm:text-sm">LinkedIn</span></a>
               </div>
               <div className="hero-icon flex flex-col items-center group">
                 <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">

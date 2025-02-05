@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Mail } from 'lucide-react';
 
 const Newsletter = () => {
   const sectionRef = useRef(null);
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -24,6 +26,11 @@ const Newsletter = () => {
     return () => ctx.revert();
   }, []);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    window.location.href = `mailto:s1ddh4rth4goud@gmail.com?subject=Contact from Portfolio&body=Email: ${email}%0D%0AMessage: ${message}`;
+  };
+
   return (
     <section ref={sectionRef} className="min-h-screen flex items-center py-20 px-4">
       <div className="container mx-auto">
@@ -34,15 +41,30 @@ const Newsletter = () => {
           <p className="newsletter-content text-xl text-gray-300 mb-8">
             Reach out to me for any inquiries, collaborations, or just to say hi. Let's connect and create something amazing together!
           </p>
-          <form className="newsletter-content space-y-4">
+          <form className="newsletter-content space-y-4" onSubmit={handleSubmit}>
             <div>
               <input
                 type="email"
                 placeholder="Your Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                required
+                style={{ cursor: 'text' }}
               />
             </div>
-            <button className="w-full py-3 px-6 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:opacity-90 transition-opacity">
+            <div>
+              <textarea
+                placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                rows="4"
+                required
+                style={{ cursor: 'text' }}
+              ></textarea>
+            </div>
+            <button type="submit" className="w-auto py-3 px-6 rounded-lg bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold hover:opacity-90 transition-opacity" style={{ cursor: 'pointer' }}>
               Send Message
             </button>
           </form>

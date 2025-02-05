@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Github } from 'lucide-react';
+import cryptoImage from './crpto.png'; // Ensure the image is in the components folder
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,21 +32,27 @@ const Projects = () => {
   const projects = [
     {
       title: "Arth Gyan",
-      description: "Financial Literacy Platform ",
+      description: "Financial Literacy Platform",
       image: "https://camo.githubusercontent.com/a4a94e10a38321ed235cd78366435ed3a358334b046f42bcebaab050a3992270/68747470733a2f2f696d672e796f75747562652e636f6d2f76692f4a3961344b6a41454553672f6d617872657364656661756c742e6a7067",
-      tech: ["React.js", "Node.js", "Gemini APIKEY'S","Trade viewApi"]
+      tech: ["React.js", "Node.js", "Gemini APIKEY'S", "Trade viewApi"],
+      github: "https://github.com/SiddharthaArepalli/",
+      live: "https://arthgyan23.netlify.app/"
     },
     {
       title: "The Flash Cards",
       description: "Generate flashcards from text",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      tech: ["Node.js", "Express.js", "Nodemon(NPM) ", "File System"]
+      tech: ["Node.js", "Express.js", "Nodemon(NPM)", "File System"],
+      github: "https://github.com/SiddharthaArepalli/The-Flash-Cards",
+      live: "https://theflashcards.com"
     },
     {
-      title: "Crypto Baz",
+      title: "Crypto BazZar",
       description: "Feature-rich social platform with real-time messaging",
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      tech: ["Next.js", "Socket.io", "PostgreSQL"]
+      image: cryptoImage,
+      tech: ["ReactJs", "CSS 3", "JavaScript", "Coingecho API"],
+      github: "https://github.com/SiddharthaArepalli/CryptoBazaar",
+      live: "https://crypto-bazaar-green.vercel.app/"
     }
   ];
 
@@ -65,20 +72,20 @@ const Projects = () => {
           className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent p-8 flex flex-col justify-end transform transition-transform duration-300">
-          <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-          <p className="text-gray-200 mb-4">{project.description}</p>
+          <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
+          <p className="text-white mb-4">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {project.tech.map((tech, i) => (
-            <span key={i} className="px-3 py-1 bg-purple-500/20 rounded-full text-sm">
+            <span key={i} className="px-3 py-1 text-white rounded-full text-sm">
               {tech}
             </span>
             ))}
           </div>
           <div className="flex gap-4">
-            <a href="https://github.com/SiddharthaArepalli/ArthGyan" className="text-gray-100 hover:text-purple-400 transition-colors">
+            <a href={project.github} className="text-gray-100 hover:text-purple-400 transition-colors">
             <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-gray-100 hover:text-purple-400 transition-colors">
+            <a href={project.live} className="text-gray-100 hover:text-purple-400 transition-colors">
             <ExternalLink className="w-6 h-6" />
             </a>
           </div>
