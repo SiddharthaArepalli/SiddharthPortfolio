@@ -82,29 +82,42 @@ const Hero = () => {
             </div>
             
             <div className="flex justify-center lg:justify-start gap-4 sm:gap-8 py-6 flex-wrap">
-              <div className="hero-icon flex flex-col items-center group">
+              <div className="hero-icon flex flex-col items-center group cursor-pointer">
+                <a href="https://www.linkedin.com/in/siddharthaarepalli/" className='cursor-pointer'>
                 <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
                   <Linkedin className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
                 </div>
-                <a href="https://www.linkedin.com/in/siddharthaarepalli/"><span className="mt-2 text-xs sm:text-sm">LinkedIn</span></a>
+                </a>
+               <span className="mt-2 text-xs sm:text-sm">LinkedIn</span>
               </div>
-              <div className="hero-icon flex flex-col items-center group">
-                <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
-                  <Instagram className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
-                </div>
+              <div className="hero-icon flex flex-col items-center group cursor-pointer">
+                <a href="https://www.instagram.com/s1ddh4rth_dev/" className='cursor-pointer'>
+                    <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
+                      <Instagram className="w-6 h-6 sm:w-8 sm:h-8 text-pink-500" />
+                    </div>
+                </a>
                 <span className="mt-2 text-xs sm:text-sm">Instagram</span>
               </div>
-              <div className="hero-icon flex flex-col items-center group">
-                <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
-                  <Github className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
-                </div>
+              <div className="hero-icon flex flex-col items-center group cursor-pointer">
+                <a href="https://github.com/SiddharthaArepalli/" className='cursor-pointer'>
+                    <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
+                      <Github className="w-6 h-6 sm:w-8 sm:h-8 text-black-400" />
+                    </div>
+                </a>
                 <span className="mt-2 text-xs sm:text-sm">GitHub</span>
               </div>
-              <div className="hero-icon flex flex-col items-center group">
-                <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
-                  <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-blue-400" />
-                </div>
-                <span className="mt-2 text-xs sm:text-sm">Resume</span>
+              
+              <div className="hero-icon flex flex-col items-center group cursor-pointer">
+                <a 
+                  href="../utils/Siddhartha_Arepalli_Resume.pdf" 
+                  download="Siddhartha_Arepalli_Resume.pdf" 
+                  className="cursor-pointer"
+                >
+                  <div className="p-2 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
+                    <FileText className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                  </div>
+                </a>
+                  <span className="mt-3 text-xs sm:text-sm">Resume</span>
               </div>
             </div>
           </div>

@@ -76,7 +76,7 @@ const Navbar = () => {
                 <a
                   key={index}
                   href={item.href}
-                  className="nav-item text-gray-300 hover:text-white transition-colors relative group"
+                  className="nav-item text-gray-300 hover:text-white transition-colors relative group cursor-pointer"
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-300 group-hover:w-full" />

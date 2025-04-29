@@ -48,7 +48,7 @@ const Skills = () => {
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto backdrop-blur-md bg-black/10 p-8 rounded-2xl border border-white/20">
           <h2 className="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
-            Technical Skills
+            <span className='text-white'>Technical</span> Skills
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map((skillGroup, index) => (

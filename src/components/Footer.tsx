@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="py-6 text-center text-gray-400">
-      <p>Designed and Developed by Sid with Love ❤️</p>
+    <footer className="py-6 text-center text-white">
+      <p className="mt-2">© {new Date().getFullYear()} Developed by <span className='text-blue-400'>Siddhartha</span> with 💗</p>
     </footer>
   );
 };
