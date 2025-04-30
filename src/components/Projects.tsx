@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ExternalLink, Github } from 'lucide-react';
 import cryptoImage from './crpto.png'; // Ensure the image is in the components folder
-import payKaroImage from './paykaro.png'; // Ensure the image is in the components folder
+import payKaroImage from './payKaro.png'; // Ensure the image is in the components folder
 
 gsap.registerPlugin(ScrollTrigger);
 

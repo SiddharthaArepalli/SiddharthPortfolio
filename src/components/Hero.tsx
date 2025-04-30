@@ -38,20 +38,6 @@ const Hero = () => {
         ease: "back.out(1.7)",
         delay: 0.3
       });
-
-      // Zero-gravity bouncy words animation for the name
-      const letters = headingRef.current.textContent.split("");
-      headingRef.current.innerHTML = letters.map(letter => `<span class="letter">${letter}</span>`).join("");
-      gsap.fromTo(".letter", {
-        y: -20,
-        opacity: 0
-      }, {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "bounce.out",
-        stagger: 0.05
-      });
     }, heroRef);
 
     return () => ctx.revert();
@@ -101,7 +87,7 @@ const Hero = () => {
               <div className="hero-icon flex flex-col items-center group cursor-pointer">
                 <a href="https://github.com/SiddharthaArepalli/" className='cursor-pointer'>
                     <div className="p-3 sm:p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 transition-colors group-hover:bg-white/10">
-                      <Github className="w-6 h-6 sm:w-8 sm:h-8 text-black-400" />
+                      <Github className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" /> {/* Fixed invalid Tailwind class */}
                     </div>
                 </a>
                 <span className="mt-2 text-xs sm:text-sm">GitHub</span>
@@ -109,7 +95,7 @@ const Hero = () => {
               
               <div className="hero-icon flex flex-col items-center group cursor-pointer">
                 <a 
-                  href="../utils/Siddhartha_Arepalli_Resume.pdf" 
+                  href="/utils/Siddhartha_Arepalli_Resume.pdf" // Corrected resume link path
                   download="Siddhartha_Arepalli_Resume.pdf" 
                   className="cursor-pointer"
                 >
