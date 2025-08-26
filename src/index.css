@@ -1,52 +1,56 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assests/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    visibility: hidden;
-    @apply bg-gradient-to-r from-black to-blue-900 cursor-none text-white;
+    @apply bg-gray-50 text-gray-900;
+    font-family: 'Gilroy', 'Inter', 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    letter-spacing: 0.01em;
   }
 }
 
 @layer utilities {
-  .text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  .card {
+    @apply bg-white rounded-2xl shadow-lg p-6;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  }
+  .section-title {
+    @apply text-3xl font-bold mb-2 text-gray-800;
+    letter-spacing: -0.02em;
+  }
+  .section-subtitle {
+    @apply text-lg text-gray-500 mb-6;
   }
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Hide cursor on interactive elements */
-a, button, input, textarea {
-  @apply cursor-none;
-}
-
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
-
 ::-webkit-scrollbar-track {
-  @apply bg-black;
+  background: #f3f4f6;
 }
-
 ::-webkit-scrollbar-thumb {
-  @apply bg-gradient-to-b from-purple-500 to-pink-500 rounded-full;
+  background: #d1d5db;
+  border-radius: 8px;
 }
-
-@media (max-width: 768px) {
-  .cursor, .cursor-follower {
-    display: none;
-  }
-}
-
 
 @media (max-width: 768px) {
   .herosection {
-    margin-top: 80px;
+    margin-top: 56px;
   }
 }

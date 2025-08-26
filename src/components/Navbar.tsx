@@ -58,41 +58,50 @@ const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
-      <div className="max-w-7xl mx-auto flex justify-center">
-        <div className="backdrop-blur-md bg-black/30 border border-white/10 rounded-2xl px-6 py-4">
-          <div className="flex items-center justify-between">
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-white"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              <Menu />
-            </button>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              {menuItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="nav-item text-gray-300 hover:text-white transition-colors relative group cursor-pointer"
-                >
-                  {item.label}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-300 group-hover:w-full" />
-                </a>
-              ))}
-            </div>
-          </div>
+    <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 px-2 py-3 bg-black border-b border-neutral-800">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        {/* Logo and Name */}
+        <div className="flex items-center gap-2 select-none">
+          <span className="w-7 h-7 bg-white rounded-md flex items-center justify-center font-bold text-black text-lg mr-1">S</span>
+          <span className="text-white font-semibold text-lg tracking-tight">Siddhartha Arepalli</span>
         </div>
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-2 ml-8">
+          {menuItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              className="nav-item px-3 py-2 rounded-md text-white font-medium hover:bg-neutral-800 transition-colors text-base"
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+            href="/utils/Siddhartha_Arepalli_Resume%20(1).pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-2 px-4 py-2 rounded-full border border-white text-white font-medium hover:bg-white hover:text-black transition-colors text-base flex items-center gap-1"
+          >
+            See Resume <span aria-hidden>↗</span>
+          </a>
+        </div>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <Menu />
+        </button>
       </div>
 
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className="fixed top-0 right-0 h-full w-3/4 max-w-sm mt-30 z-50 shadow-lg transform translate-x-full opacity-0 flex flex-col p-6 bg-black/80 backdrop-blur-md"
+        className="fixed top-0 right-0 h-full w-3/4 max-w-xs z-50 shadow-lg transform translate-x-full opacity-0 flex flex-col p-6 bg-black border-l border-neutral-800"
       >
         <div className="flex justify-between items-center mb-6">
+          <span className="w-7 h-7 bg-white rounded-md flex items-center justify-center font-bold text-black text-lg">N</span>
           <button
             onClick={() => setIsOpen(false)}
             className="text-gray-400 hover:text-white"
@@ -100,17 +109,25 @@ const Navbar = () => {
             <X />
           </button>
         </div>
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-2">
           {menuItems.map((item, index) => (
             <a
               key={index}
               href={item.href}
-              className="text-gray-300 hover:text-white transition-colors"
-              onClick={() => setIsOpen(false)} // Close menu on click
+              className="px-3 py-2 rounded-md text-white font-medium hover:bg-neutral-800 transition-colors text-base"
+              onClick={() => setIsOpen(false)}
             >
               {item.label}
             </a>
           ))}
+          <a
+            href="/utils/Siddhartha_Arepalli_Resume%20(1).pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 px-4 py-2 rounded-full border border-white text-white font-medium hover:bg-white hover:text-black transition-colors text-base flex items-center gap-1"
+          >
+            See Resume <span aria-hidden>↗</span>
+          </a>
         </div>
       </div>
     </nav>

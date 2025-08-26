@@ -58,28 +58,28 @@ const Projects = () => {
   ];
 
   return (
-    <div ref={projectsRef} className="text-gray-100 py-20 px-4">
+    <div ref={projectsRef} className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">
-          <span className="text-white">My <span className='text-blue-600'>Projects</span></span>
+        <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent">
+          <span className="text-white">My <span className='text-gray-400'>Projects</span></span>
         </h2>
         {projects.map((project, index) => (
-          <div key={index} className="projects-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
+          <div key={index} className="projects-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16 bg-neutral-900/80 rounded-2xl border border-white/10 shadow-lg p-8">
             {/* Left Image */}
             <div className="relative">
               <img
                 src={project.image}
                 alt={project.title}
-                className="rounded-xl shadow-lg"
+                className="rounded-xl shadow-lg border border-white/10 bg-black/20"
               />
             </div>
             {/* Right Content */}
             <div>
-              <h3 className="text-3xl font-bold text-white mb-4">{project.title}</h3>
-              <p className="text-gray-300 mb-6">{project.description}</p>
+              <h3 className="text-3xl font-bold text-white mb-4 font-gilroy">{project.title}</h3>
+              <p className="text-gray-200 mb-6 font-gilroy">{project.description}</p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {project.tech.map((tech, i) => (
-                  <span key={i} className="px-3 py-1 bg-white/10 text-white rounded-full text-sm">
+                  <span key={i} className="px-3 py-1 bg-gray-700/40 text-white rounded-full text-sm font-gilroy border border-white/10">
                     {tech}
                   </span>
                 ))}
@@ -87,7 +87,7 @@ const Projects = () => {
               <div className="flex gap-4">
                 <a
                   href={project.live}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition cursor-pointer"
+                  className="flex items-center gap-2 px-4 py-2 bg-white text-black rounded-lg hover:bg-gray-200 transition cursor-pointer font-semibold"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -96,7 +96,7 @@ const Projects = () => {
                 </a>
                 <a
                   href={project.github}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition cursor-pointer"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition cursor-pointer font-semibold"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
