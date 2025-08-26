@@ -106,7 +106,8 @@ const Navbar = () => {
         className={`fixed top-0 right-0 h-full w-full max-w-full z-50 shadow-lg transform translate-x-full opacity-0 flex flex-col bg-neutral-950 border-l border-neutral-800 transition-all duration-300 ${isOpen ? '!translate-x-0 !opacity-100' : ''}`}
         style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
       >
-        <div className="flex justify-end p-6">
+        <div className="flex justify-between items-center p-6">
+          <span className="w-7 h-7 bg-white rounded-md flex items-center justify-center font-bold text-black text-lg mr-2">S</span>
           <button
             onClick={() => setIsOpen(false)}
             className="text-gray-300 hover:text-white text-3xl focus:outline-none"

@@ -17,14 +17,14 @@ const Footer = () => {
         </div>
         {/* Right: Links */}
         <div className="ml-20 flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-3 gap-y-3 text-gray-300 text-base min-w-[220px]">
-          <span className="block">Portfolio</span>
-          <span className="block">G mail</span>
-          <span className="block">Instagram</span>
-          <span className="block">About</span>
-          <span className="block">LinkedIn</span>
-          <span className="block">Contact me</span>
-          <span className="block">Behance</span>
-          <span className="block">Book a call</span>
+          <a href="#home" className="block hover:text-white transition-colors">Portfolio</a>
+          <a href="mailto:siddharthaarepalli@gmail.com" className="block hover:text-white transition-colors">G mail</a>
+          <a href="https://www.instagram.com/s1ddh4rth_dev/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">Instagram</a>
+          <a href="#about" className="block hover:text-white transition-colors">About</a>
+          <a href="https://www.linkedin.com/in/siddharthaarepalli/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">LinkedIn</a>
+          <a href="#contact" className="block hover:text-white transition-colors">Contact me</a>
+          <a href="https://www.behance.net/" target="_blank" rel="noopener noreferrer" className="block hover:text-white transition-colors">Behance</a>
+          <a href="mailto:siddharthaarepalli@gmail.com?subject=Book%20a%20Call" className="block hover:text-white transition-colors">Book a call</a>
         </div>
       </div>
       {/* Big Name Footer Heading */}
