@@ -48,7 +48,7 @@ const Navbar = () => {
         });
       } else {
         gsap.to(menuRef.current, {
-          x: '100%',
+          x: '-100%',
           opacity: 0,
           duration: 0.2,
           ease: 'power2.in',
@@ -95,48 +95,50 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Menu & Overlay */}
-      {/* Overlay */}
+      {/* Mobile Sidebar Drawer & Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity duration-200" onClick={() => setIsOpen(false)}></div>
+        <>
+          {/* Overlay */}
+          <div className="fixed inset-0 z-40 bg-black bg-opacity-80 backdrop-blur-sm transition-opacity duration-200" onClick={() => setIsOpen(false)}></div>
+          {/* Sidebar Drawer */}
+          <div
+            ref={menuRef}
+            className={`fixed top-0 left-0 h-full w-4/5 max-w-xs z-50 shadow-lg transform -translate-x-full opacity-0 flex flex-col bg-black transition-all duration-300 border-r border-neutral-800 ${isOpen ? '!translate-x-0 !opacity-100' : ''}`}
+            style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
+          >
+            <div className="flex justify-between items-center p-6">
+              <span className="w-7 h-7 bg-white rounded-md flex items-center justify-center font-bold text-black text-lg mr-2">S</span>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-gray-300 hover:text-white text-3xl focus:outline-none"
+                aria-label="Close menu"
+              >
+                <X size={32} />
+              </button>
+            </div>
+            <div className="flex flex-col items-start justify-center flex-1 gap-6 px-6">
+              {menuItems.map((item, index) => (
+                <a
+                  key={index}
+                  href={item.href}
+                  className="text-white text-lg font-semibold py-2 px-2 rounded-lg hover:bg-neutral-800 transition-colors w-full text-left"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </a>
+              ))}
+              <a
+                href="/utils/Siddhartha_Arepalli_Resume%20(1).pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 px-4 py-2 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-black transition-colors text-base flex items-center gap-2 w-full justify-center"
+              >
+                See Resume <span aria-hidden>↗</span>
+              </a>
+            </div>
+          </div>
+        </>
       )}
-      {/* Slide-in Menu */}
-      <div
-        ref={menuRef}
-        className={`fixed top-0 right-0 h-full w-full max-w-full z-50 shadow-lg transform translate-x-full opacity-0 flex flex-col bg-neutral-950 border-l border-neutral-800 transition-all duration-300 ${isOpen ? '!translate-x-0 !opacity-100' : ''}`}
-        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
-      >
-        <div className="flex justify-between items-center p-6">
-          <span className="w-7 h-7 bg-white rounded-md flex items-center justify-center font-bold text-black text-lg mr-2">S</span>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-gray-300 hover:text-white text-3xl focus:outline-none"
-            aria-label="Close menu"
-          >
-            <X size={32} />
-          </button>
-        </div>
-        <div className="flex flex-col items-center justify-center flex-1 gap-6">
-          {menuItems.map((item, index) => (
-            <a
-              key={index}
-              href={item.href}
-              className="text-white text-xl font-semibold py-2 px-6 rounded-lg hover:bg-neutral-800 transition-colors w-4/5 text-center"
-              onClick={() => setIsOpen(false)}
-            >
-              {item.label}
-            </a>
-          ))}
-          <a
-            href="/utils/Siddhartha_Arepalli_Resume%20(1).pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 px-6 py-3 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-black transition-colors text-lg flex items-center gap-2 w-4/5 justify-center"
-          >
-            See Resume <span aria-hidden>↗</span>
-          </a>
-        </div>
-      </div>
     </nav>
   );
 };
