@@ -44,7 +44,7 @@ const Hero = () => {
         </p>
         {/* Connect button */}
         <a
-          href="#contact"
+          href="https://linkedin.com/in/siddharthaarepalli" target='_blank'
           className="inline-block px-8 py-3 rounded-full border border-white text-white text-lg font-medium hover:bg-white hover:text-black transition-colors duration-200"
         >
           Let's connect <span aria-hidden>↗</span>
