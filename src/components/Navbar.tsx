@@ -78,7 +78,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/utils/Siddhartha_Arepalli_Resume%20(1).pdf"
+            href="https://drive.google.com/file/d/14ragzUGGOdGr8dha0Y8biBSH3dLx2-Oq/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-2 px-4 py-2 rounded-full border border-white text-white font-medium hover:bg-white hover:text-black transition-colors text-base flex items-center gap-1"
@@ -94,51 +94,47 @@ const Navbar = () => {
           <Menu />
         </button>
       </div>
-
-      {/* Mobile Sidebar Drawer & Overlay */}
+      {/* Overlay */}
       {isOpen && (
-        <>
-          {/* Overlay */}
-          <div className="fixed inset-0 z-40 bg-black bg-opacity-80 backdrop-blur-sm transition-opacity duration-200" onClick={() => setIsOpen(false)}></div>
-          {/* Sidebar Drawer */}
-          <div
-            ref={menuRef}
-            className={`fixed top-0 left-0 h-full w-4/5 max-w-xs z-50 shadow-lg transform -translate-x-full opacity-0 flex flex-col bg-black transition-all duration-300 border-r border-neutral-800 ${isOpen ? '!translate-x-0 !opacity-100' : ''}`}
-            style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
+        <div className="fixed inset-0 z-40 bg-black bg-opacity-80 backdrop-blur-sm transition-opacity duration-200" onClick={() => setIsOpen(false)}></div>
+      )}
+      {/* Sidebar Drawer */}
+      <div
+        ref={menuRef}
+        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs z-50 shadow-lg transform -translate-x-full opacity-0 flex flex-col bg-black transition-all duration-300 border-r border-neutral-800 ${isOpen ? '!translate-x-0 !opacity-100' : ''}`}
+        style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
+      >
+        <div className="flex justify-between items-center p-6">
+          <span className="w-7 h-7 bg-white rounded-md flex items-center justify-center font-bold text-black text-lg mr-2">S</span>
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-gray-300 hover:text-white text-3xl focus:outline-none"
+            aria-label="Close menu"
           >
-            <div className="flex justify-between items-center p-6">
-              <span className="w-7 h-7 bg-white rounded-md flex items-center justify-center font-bold text-black text-lg mr-2">S</span>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-white text-3xl focus:outline-none"
-                aria-label="Close menu"
-              >
-                <X size={32} />
-              </button>
-            </div>
-            <div className="flex flex-col items-start justify-center flex-1 gap-6 px-6">
-              {menuItems.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="text-white text-lg font-semibold py-2 px-2 rounded-lg hover:bg-neutral-800 transition-colors w-full text-left"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-              <a
-                href="/utils/Siddhartha_Arepalli_Resume%20(1).pdf"
+            <X size={32} />
+          </button>
+        </div>
+        <div className="flex flex-col items-start justify-center flex-1 gap-6 px-6">
+          {menuItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              className="text-white text-lg font-semibold py-2 px-2 rounded-lg hover:bg-neutral-800 transition-colors w-full text-left"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
+          <a
+                href="https://drive.google.com/file/d/14ragzUGGOdGr8dha0Y8biBSH3dLx2-Oq/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 px-4 py-2 rounded-full border border-white text-white font-semibold hover:bg-white hover:text-black transition-colors text-base flex items-center gap-2 w-full justify-center"
               >
                 See Resume <span aria-hidden>↗</span>
               </a>
-            </div>
-          </div>
-        </>
-      )}
+        </div>
+      </div>
     </nav>
   );
 };
