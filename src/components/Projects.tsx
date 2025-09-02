@@ -49,7 +49,7 @@ const Projects = () => {
     },
     {
       title: "Crypto Bazzar",
-      description: "Feature-rich social platform with real-time messaging",
+      description: "web app for screening and analyzing cryptocurrencies using price, market cap, volume, and performance indicators",
       image: cryptoImage,
       tech: ["ReactJs", "CSS 3", "JavaScript", "Coingecho API"],
       github: "https://github.com/SiddharthaArepalli/CryptoBazaar",
