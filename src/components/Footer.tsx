@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="text-gray-300 text-base leading-relaxed">
             Full Stack developer crafting<br />clean & modern products
           </div>
-          <div className="text-gray-400 text-sm select-all">siddharthaarepalli@gmail.com</div>
+          <div className="text-gray-400 text-sm select-all">asiddharthagoud@gmail.com</div>
         </div>
         {/* Right: Links */}
         <div className="ml-20 flex-1 grid grid-cols-2 sm:grid-cols-3 gap-x-3 gap-y-3 text-gray-300 text-base min-w-[220px]">
