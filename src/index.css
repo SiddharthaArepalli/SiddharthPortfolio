@@ -1,56 +1,28 @@
-@font-face {
-  font-family: 'Gilroy';
-  src: url('./assests/fonts/Gilroy-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  .theme {
+    --animate-shiny-text: shiny-text 8s infinite}
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
   body {
-    @apply bg-gray-50 text-gray-900;
-    font-family: 'Gilroy', 'Inter', 'Segoe UI', Arial, sans-serif;
-    min-height: 100vh;
-    letter-spacing: 0.01em;
+    @apply bg-background text-foreground;
   }
 }
 
-@layer utilities {
-  .card {
-    @apply bg-white rounded-2xl shadow-lg p-6;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
-  }
-  .section-title {
-    @apply text-3xl font-bold mb-2 text-gray-800;
-    letter-spacing: -0.02em;
-  }
-  .section-subtitle {
-    @apply text-lg text-gray-500 mb-6;
-  }
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #f3f4f6;
-}
-::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-  .herosection {
-    margin-top: 56px;
+@theme inline {
+  @keyframes shiny-text {
+  0%, 90%, 100% {
+    background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+  30%, 60% {
+    background-position: calc(100% + var(--shiny-width)) 0;
+    }
   }
 }

@@ -61,7 +61,7 @@ const Projects = () => {
     <div ref={projectsRef} className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center bg-gradient-to-r from-gray-100 to-gray-400 bg-clip-text text-transparent">
-          <span className="text-white">My <span className='text-gray-400'>Projects</span></span>
+          <span className="text-white">My <span className='text-white'>Projects</span></span>
         </h2>
         {projects.map((project, index) => (
           <div key={index} className="projects-container grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16 bg-neutral-900/80 rounded-2xl border border-white/10 shadow-lg p-8">

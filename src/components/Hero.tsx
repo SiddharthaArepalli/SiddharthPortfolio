@@ -1,7 +1,8 @@
 
 import mypic from './mypic.jpg';
 import { useState } from 'react';
-
+import { HyperText } from "@/components/ui/hyper-text"
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text"
 
 const Hero = () => {
   const [hovered, setHovered] = useState(false);
@@ -47,7 +48,7 @@ const Hero = () => {
           href="https://linkedin.com/in/siddharthaarepalli" target='_blank'
           className="inline-block px-8 py-3 rounded-full border border-white text-white text-lg font-medium hover:bg-white hover:text-black transition-colors duration-200"
         >
-          Let's connect <span aria-hidden>↗</span>
+          <HyperText>Let's connect</HyperText>
         </a>
       </div>
     </section>

@@ -7,22 +7,24 @@ const Experience = () => {
 
   const experiences = [
     {
+      role : "Full Stack AI Developer Intern",
+      company: "Techolution",
+      period: "current"
+    },
+    {
       role: "Technical Team Lead & Full Stack Developer",
       company: "Wission Axis",
       period: "June 2024 - Sep 2024",
-      description: "Led a team of developers to build and deploy enterprise applications using React, Node.js, and AWS."
     },
     {
       role: "Deputy Technical Lead",
       company: "Students Developers Community",
-      period: "2024 - present",
-      description: "Oversaw the development and maintenance of multiple client projects using modern web technologies."
+      period: "Oct 2024 - Oct 2025",
     },
     {
       role: "UI-UX Designer Intern",
       company: "Coding Idol",
       period: "Nov 2023 - Mar 2024",
-      description: "Designed and implemented responsive and interactive web applications using React and Vue.js."
     }
   ];
 
@@ -64,7 +66,6 @@ const Experience = () => {
                   <h3 className="text-xl font-semibold text-white font-gilroy">{exp.role}</h3>
                   <p className="text-gray-300 mb-2 font-gilroy">{exp.company}</p>
                   <p className="text-gray-400 text-sm mb-3 font-gilroy">{exp.period}</p>
-                  <p className="text-gray-200 font-gilroy">{exp.description}</p>
                 </div>
               </div>
             ))}

@@ -5,11 +5,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
         {/* Left: Name/Logo and Contact */}
         <div className="flex flex-col gap-6 min-w-[220px]">
-          <div className="flex items-center gap-2">
-            {/* Logo Placeholder */}
-            <span className="block w-7 h-7 bg-white rounded-md mr-2" />
-            <span className="text-white text-xl font-bold tracking-wide">Siddhartha Arepalli</span>
-          </div>
+          
           <div className="text-gray-300 text-base leading-relaxed">
             Full Stack developer crafting<br />clean & modern products
           </div>
