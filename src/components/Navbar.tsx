@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { Menu, X } from 'lucide-react';
+import { HyperText } from './ui/hyper-text';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,7 +83,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="ml-2 px-4 py-2 rounded-full border border-white text-white font-medium hover:bg-white hover:text-black transition-colors text-base flex items-center gap-1"
           >
-            See Resume <span aria-hidden>↗</span>
+            See Resume 
           </a>
         </div>
         {/* Mobile Menu Button */}
@@ -110,9 +111,9 @@ const Navbar = () => {
             href="https://drive.google.com/file/d/14ragzUGGOdGr8dha0Y8biBSH3dLx2-Oq/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-11/12 max-w-md py-3 rounded-lg bg-black text-white font-bold text-lg text-center shadow hover:bg-neutral-800 transition-colors border border-white"
+
           >
-            See Resume <span aria-hidden>↗</span>
+           <HyperText>See Resume</HyperText>
           </a>
         </div>
       )}
